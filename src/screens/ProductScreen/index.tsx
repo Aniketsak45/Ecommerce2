@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import product from "../../data/product";
 import {Picker} from "@react-native-picker/picker"; 
 import QuantitySelector from "../../components/QuantitySelector";
@@ -14,7 +14,7 @@ export default function ProductScreen() {
     const [quantity, setQuantity] = useState(1);
     
 return (
-<View style={Styles.root}>
+<ScrollView style={Styles.root}>
 <Text style={Styles.title}>{product.title}</Text>
 
 
@@ -69,7 +69,7 @@ onPress={() => {
 
 />
 
-</View>
+</ScrollView>
 
 
 );
