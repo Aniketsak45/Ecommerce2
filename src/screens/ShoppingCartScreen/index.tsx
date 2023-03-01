@@ -5,6 +5,7 @@ import CartProductItem from "../../components/CartProductItem";
 import Button from "../../components/Button";
 
 import products from "../../data/cart";
+import { useNavigation } from "@react-navigation/native";
 
 
 
@@ -17,7 +18,12 @@ export default function ShoppingCartScreen() {
   );
   
   
-  
+  const navigation = useNavigation();
+  const onCheckout = () => {
+
+    navigation.navigate('Address');
+  }
+
   
   return (
       <View style={Styles.page} >
@@ -42,7 +48,7 @@ export default function ShoppingCartScreen() {
               </Text>
             </Text>
   
-            <Button  text="Proceed to checkout" onPress={() => console.warn('go to check out') } />
+            <Button  text="Proceed to checkout" onPress={onCheckout } />
             
           </View>
             
