@@ -10,7 +10,9 @@ import products from "../../data/products";
 
 
 
-export default function HomeScreen() {
+const HomeScreen = ({searchValue}: {searchValue:string}) =>  {
+
+    console.log(searchValue);
     return (
       <View style={Styles.page} >
 
@@ -42,3 +44,6 @@ export default function HomeScreen() {
    
 
   });
+
+
+  export default HomeScreen;
