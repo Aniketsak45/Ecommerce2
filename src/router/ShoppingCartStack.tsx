@@ -16,7 +16,7 @@ return(
          <Stack.Screen component={ShoppingCartScreen} name="Cart" options={{title:'Shopping Cart'}} />
          <Stack.Screen component={AddressScreen } name="Address" options={{title:'Address'}} /> 
          
-
+                   
         </Stack.Navigator>
 
 )
